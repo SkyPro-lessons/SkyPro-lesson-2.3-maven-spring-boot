@@ -22,22 +22,26 @@ public class CalculatorController {
     }
 
     @GetMapping("/plus")
-    public String plus(@RequestParam int num1, @RequestParam int num2) {
+    public String plus(@RequestParam(defaultValue = "0") int num1,
+                       @RequestParam(defaultValue = "0") int num2) {
         return calculatorService.printSolutionPlus(num1, num2);
     }
 
     @GetMapping("/minus")
-    public String minus(@RequestParam int num1, @RequestParam int num2) {
+    public String minus(@RequestParam(defaultValue = "0") int num1,
+                        @RequestParam(defaultValue = "0") int num2) {
         return calculatorService.printSolutionMinus(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public String multiply(@RequestParam int num1, @RequestParam int num2) {
+    public String multiply(@RequestParam(defaultValue = "0") int num1,
+                           @RequestParam(defaultValue = "0") int num2) {
         return calculatorService.printSolutionMultiply(num1, num2);
     }
 
     @GetMapping("/divide")
-    public String divide(@RequestParam int num1, @RequestParam int num2) {
+    public String divide(@RequestParam(defaultValue = "0") int num1,
+                         @RequestParam(defaultValue = "0") int num2) {
         return calculatorService.printSolutionDivide(num1, num2);
     }
 

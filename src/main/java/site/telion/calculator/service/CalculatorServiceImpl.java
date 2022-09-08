@@ -22,7 +22,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public String printSolutionDivide(int a, int b) {
         try {
-            return a + " / " + b + " = " + Math.round((double) a / b);
+            return a + " / " + b + " = " + Math.round(a / b * 1.0);
         } catch (ArithmeticException e) {
             return a + " / " + b + " = 0";
         }
