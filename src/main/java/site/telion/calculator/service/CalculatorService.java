@@ -1,11 +1,11 @@
 package site.telion.calculator.service;
 
 public interface CalculatorService {
-    String printSolutionPlus(int a, int b);
+    String printSolutionPlus(Double a, Double b);
 
-    String printSolutionMinus(int a, int b);
+    String printSolutionMinus(Double a, Double b);
 
-    String printSolutionMultiply(int a, int b);
+    String printSolutionMultiply(Double a, Double b);
 
-    String printSolutionDivide(int a, int b);
+    String printSolutionDivide(Double a, Double b);
 }

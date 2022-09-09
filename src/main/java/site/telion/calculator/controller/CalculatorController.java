@@ -15,33 +15,32 @@ public class CalculatorController {
         this.calculatorService = calculatorService;
     }
 
-
     @GetMapping
     public String helloMessage() {
         return "Добро пожаловать в калькулятор";
     }
 
     @GetMapping("/plus")
-    public String plus(@RequestParam(defaultValue = "0") int num1,
-                       @RequestParam(defaultValue = "0") int num2) {
+    public String plus(@RequestParam(required = false) Double num1,
+                       @RequestParam(required = false) Double num2) {
         return calculatorService.printSolutionPlus(num1, num2);
     }
 
     @GetMapping("/minus")
-    public String minus(@RequestParam(defaultValue = "0") int num1,
-                        @RequestParam(defaultValue = "0") int num2) {
+    public String minus(@RequestParam(required = false) Double num1,
+                        @RequestParam(required = false) Double num2) {
         return calculatorService.printSolutionMinus(num1, num2);
     }
 
     @GetMapping("/multiply")
-    public String multiply(@RequestParam(defaultValue = "0") int num1,
-                           @RequestParam(defaultValue = "0") int num2) {
+    public String multiply(@RequestParam(required = false) Double num1,
+                           @RequestParam(required = false) Double num2) {
         return calculatorService.printSolutionMultiply(num1, num2);
     }
 
     @GetMapping("/divide")
-    public String divide(@RequestParam(defaultValue = "0") int num1,
-                         @RequestParam(defaultValue = "0") int num2) {
+    public String divide(@RequestParam(required = false) Double num1,
+                         @RequestParam(required = false) Double num2) {
         return calculatorService.printSolutionDivide(num1, num2);
     }
 
