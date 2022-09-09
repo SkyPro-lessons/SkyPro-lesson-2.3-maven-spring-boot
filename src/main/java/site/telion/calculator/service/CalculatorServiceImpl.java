@@ -25,11 +25,10 @@ public class CalculatorServiceImpl implements CalculatorService {
     @Override
     public String printSolutionDivide(Double a, Double b) {
         checkNum(a, b);
-        try {
-            return a + " / " + b + " = " + Math.round(a / b * 1.0);
-        } catch (ArithmeticException e) {
-            return a + " / " + b + " = 0";
+        if (b == 0) {
+            return "делить на 0 нельзя";
         }
+        return a + " / " + b + " = " + (a / b * 1.0);
     }
 
     private void checkNum(Double a, Double b) {
