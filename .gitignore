@@ -30,12 +30,5 @@ build/
 !**/src/test/**/build/
 
 ### VS Code ###
-.vscode/
-/.mvn/
-/.idea/
-/HELP.md
-/mvnw
-/mvnw.cmd
-/pom.xml
 /src/main/java/site/telion/calculator/CalculatorApplication.java
 /src/test/
